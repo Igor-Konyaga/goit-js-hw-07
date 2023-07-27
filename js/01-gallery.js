@@ -34,6 +34,10 @@ function handleClickImg(e) {
     .create(`<img src = "${linkOriginalImg}">`);
 
 	 instance.show();
+	 
+	 if (e.target.nodeName !== "IMG") {
+		return galleryEl.removeEventListener("click", handleClickImg);
+	 }
 
   galleryEl.addEventListener("keydown", handleCloseModal);
 
