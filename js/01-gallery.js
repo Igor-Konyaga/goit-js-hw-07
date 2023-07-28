@@ -33,7 +33,7 @@ function handleClickImg(e) {
   const instance = basicLightbox
     .create(`<img src = "${linkOriginalImg}">`, {
 		onShow: (instance) => window.addEventListener('keydown', handleCloseModal),
-		onClose: (instance) => window.removeEventListenerEventListener('keydown', handleCloseModal)
+		onClose: (instance) => window.removeEventListener('keydown', handleCloseModal)
 	 });
 
 	 instance.show();
